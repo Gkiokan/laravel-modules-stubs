@@ -4,7 +4,7 @@ module.exports = {
       writeToDisk: true,
   },
 
-  outputDir: 'Module/$LOWER_NAME',
+  outputDir: 'Module/$LOWER_NAME$',
 
   lintOnSave: false,
 
