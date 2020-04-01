@@ -37,9 +37,9 @@ return [
             // 'assets/js/app' => 'Resources/assets/js/app.js',
             // 'assets/sass/app' => 'Resources/assets/sass/app.scss',
             // 'webpack' => 'webpack.mix.js',
-            'package' => 'package.json',
-            'babel.config' => 'babel.config.js',
-            'vue.config' => 'vue.config.js',
+            'package' => 'Resources/js/package.json',
+            'babel.config' => 'Resources/js/babel.config.js',
+            'vue.config' => 'Resources/js/vue.config.js',
 
         ],
         'replacements' => [
