@@ -1,0 +1,21 @@
+module.exports = {
+
+  devServer: {
+      writeToDisk: true,
+  },
+
+  outputDir: 'Module/$LOWER_NAME',
+
+  lintOnSave: false,
+
+  pluginOptions: {
+    quasar: {
+      importStrategy: 'kebab',
+      rtlSupport: false
+    }
+  },
+
+  transpileDependencies: [
+    'quasar'
+  ]
+}

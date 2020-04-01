@@ -1,0 +1,11 @@
+{
+    "name": "gkiokan/laravel-modules-stubs",
+    "description": "Stubs for Laravel-Modules with Scaffolding.",
+    "authors": [
+        {
+            "name": "Gkiokan Sali",
+            "email": "me@gkiokan.net"
+        }
+    ],
+    "require": {}
+}
