@@ -1,8 +1,8 @@
 @php
 $config = [
-    'appName' => config('app.name'),
+    'appName' => config('$LOWER_NAME$.name'),
     'locale' => $locale = app()->getLocale(),
-    'locales' => config('app.locales'),
+    'locales' => config('$LOWER_NAME$.locales'),
     // 'githubAuth' => config('services.github.client_id'),
 ];
 $polyfills = [
@@ -24,9 +24,9 @@ $polyfills = [
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>{{ config('app.name') }}</title>
+  <title>{{ config('$LOWER_NAME$.name') }}</title>
   <link rel="shortcut icon" type="image/x-icon" href="/storage/images/icon-1024.png">
-  <link rel="stylesheet" href="{{ mix('app.css', 'modules/$LOWER_NAME') }}">
+  <link rel="stylesheet" href="{{ mix('app.css', 'modules/$LOWER_NAME$') }}">
 </head>
 <body>
   @yield('content')
@@ -39,11 +39,11 @@ $polyfills = [
 
   {{-- Load the application scripts --}}
   @if (app()->isLocal())
-    <script src="{{ mix('app.js', 'modules/$LOWER_NAME') }}"></script>
+    <script src="{{ mix('app.js', 'modules/$LOWER_NAME$') }}"></script>
   @else
-    <script src="{{ mix('manifest.js', 'modules/$LOWER_NAME') }}"></script>
-    <script src="{{ mix('vendor.js', 'modules/$LOWER_NAME') }}"></script>
-    <script src="{{ mix('app.js', 'modules/$LOWER_NAME') }}"></script>
+    <script src="{{ mix('manifest.js', 'modules/$LOWER_NAME$') }}"></script>
+    <script src="{{ mix('vendor.js', 'modules/$LOWER_NAME$') }}"></script>
+    <script src="{{ mix('app.js', 'modules/$LOWER_NAME$') }}"></script>
   @endif
 </body>
 </html>
