@@ -38,12 +38,7 @@ $polyfills = [
   <script src-off="https://cdn.polyfill.io/v2/polyfill.min.js?features={{ implode(',', $polyfills) }}"></script>
 
   {{-- Load the application scripts --}}
-  @if (app()->isLocal())
-    <script src="{{ mix('app.js', 'modules/$LOWER_NAME$') }}"></script>
-  @else
-    <script src="{{ mix('manifest.js', 'modules/$LOWER_NAME$') }}"></script>
-    <script src="{{ mix('vendor.js', 'modules/$LOWER_NAME$') }}"></script>
-    <script src="{{ mix('app.js', 'modules/$LOWER_NAME$') }}"></script>
-  @endif
+  {{-- <script src="{{ asset('modules/$LOWER_NAME$/app.js') }}"></script> --}}
+
 </body>
 </html>
