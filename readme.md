@@ -10,6 +10,22 @@ However there are currently some handycaps due the missing Ressource management.
 If you are going for Vue you must use the basePath from $LOWER_NAME$.
 
 
+## Create new Module  
+```
+php artisan modules:make ModuleName
+```
+
+
+## Create new Vue Project
+```
+cd Modules/$LOWER_NAME$
+cd Ressource
+vue create js
+// merge options  
+cd js && npm i && npm run build 
+
+```
+
 ## Vue Router configuration
 ```
 // VueRouter Configuration path
