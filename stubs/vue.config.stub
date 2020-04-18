@@ -4,7 +4,20 @@ module.exports = {
       writeToDisk: true,
   },
 
-  outputDir: 'Module/$LOWER_NAME$',
+  outputDir: 'dist',
+
+  // output built static files to Laravel's public dir.
+  // note the "build" script in package.json needs to be modified as well.
+  outputDir: '../../../../public/modules/core',
+
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/modules/$LOWER_NAME$/'  // the final path for the assets and co
+    : '/modules/$LOWER_NAME$/', // If not using valet, this should be '/'
+
+  // modify the location of the generated HTML file.
+  // indexPath: process.env.NODE_ENV === 'production'
+  //   ? '../views/vue.blade.php'
+  //   : 'index.html',
 
   lintOnSave: false,
 
