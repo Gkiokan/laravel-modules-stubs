@@ -52,7 +52,7 @@ return [
             'scaffold/config' => ['STUDLY_NAME'],
             'package' => ['LOWER_NAME'],
             'babel.config' => ['LOWER_NAME'],
-            'vue.config' => ['LOWER_NAME'],            
+            'vue.config' => ['LOWER_NAME'],
             'composer' => [
                 'LOWER_NAME',
                 'STUDLY_NAME',
