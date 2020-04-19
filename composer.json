@@ -7,6 +7,16 @@
             "email": "me@gkiokan.net"
         }
     ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gkiokan\\LMS\\LMSServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
     "autoload": {
         "psr-4": {
             "Gkiokan\\LMS" : "src/"
