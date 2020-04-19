@@ -12,5 +12,5 @@
 */
 
 Route::prefix('$LOWER_NAME$')->group(function() {
-    Route::get('/{any?}', '$STUDLY_NAME$Controller@index')->where('any', '.*');
+    Route::get('/{any?}', '$STUDLY_NAME$Controller@index')->where('any', '.*')->name('$LOWER_NAME$.index');
 });
