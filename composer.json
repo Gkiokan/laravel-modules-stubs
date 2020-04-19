@@ -7,5 +7,10 @@
             "email": "me@gkiokan.net"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Gkiokan\\LMS" : "src/"
+        }
+    },
     "require": {}
 }
