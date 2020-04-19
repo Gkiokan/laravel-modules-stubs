@@ -10,6 +10,13 @@ However there are currently some handycaps due the missing Ressource management.
 If you are going for Vue you must use the basePath from $LOWER_NAME$.
 
 
+## Update Modules Configuration  
+```
+php artisan vendor:publish
+// select Gkiokan\LMS\LMSServiceProvider
+// Modules pre configuration will be copied to config/modules.php
+```
+
 ## Create new Module  
 ```
 php artisan modules:make ModuleName
@@ -22,7 +29,7 @@ cd Modules/$LOWER_NAME$
 cd Ressource
 vue create js
 // merge options  
-cd js && npm i && npm run build 
+cd js && npm i && npm run build
 
 ```
 
