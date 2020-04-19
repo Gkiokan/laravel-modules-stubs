@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Gkiokan\\LMS" : "src/"
+            "Gkiokan\\LMS\\" : "src/"
         }
     },
     "require": {}
