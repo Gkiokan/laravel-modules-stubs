@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/modules/$LOWER_NAME$/{assets?}', '$STUDLY_NAME$Controller@assets')->name('$LOWER_NAME$.assets');
+
 Route::prefix('$LOWER_NAME$')->group(function() {
     Route::get('/{any?}', '$STUDLY_NAME$Controller@index')->where('any', '.*')->name('$LOWER_NAME$.index');
 });
