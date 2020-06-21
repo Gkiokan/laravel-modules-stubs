@@ -1,0 +1,43 @@
+<?php
+
+namespace $CLASS_NAMESPACE$;
+
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Routing\Controller;
+
+use File;
+use Spatie\Sitemap\SitemapGenerator;
+use Spatie\Sitemap\Tags\Url;
+
+
+
+class SitemapController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     * @return Response
+     */
+    public function index()
+    {
+        $path = public_path('modules/$LOWER_NAME$/sitemap.xml');
+        $map  = SitemapGenerator::create('https://gkiokan.net/$LOWER_NAME$')->getSitemap();
+
+        $map->add(Url::create('$LOWER_NAME$/home'));
+        $map->add(Url::create('$LOWER_NAME$/about'));
+        $map->add(Url::create('$LOWER_NAME$/auth/login'));
+        $map->add(Url::create('$LOWER_NAME$/privacy'));
+        $map->add(Url::create('$LOWER_NAME$/terms-of-service'));
+
+        $map->add(Url::create('$LOWER_NAME$/gallery')->setPriority(1));
+        $map->add(Url::create('$LOWER_NAME$/kanax')->setPriority(1));
+        $map->add(Url::create('$LOWER_NAME$/search')->setPriority(.9));
+
+        $map->writeToFile($path);
+
+        // dump print
+        header('Content-type: text/xml');
+        die(File::get($path));
+    }
+
+}
