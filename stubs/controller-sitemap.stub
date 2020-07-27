@@ -26,12 +26,8 @@ class SitemapController extends Controller
         $map->add(Url::create('$LOWER_NAME$/home'));
         $map->add(Url::create('$LOWER_NAME$/about'));
         $map->add(Url::create('$LOWER_NAME$/auth/login'));
-        $map->add(Url::create('$LOWER_NAME$/privacy'));
-        $map->add(Url::create('$LOWER_NAME$/terms-of-service'));
-
-        $map->add(Url::create('$LOWER_NAME$/gallery')->setPriority(1));
-        $map->add(Url::create('$LOWER_NAME$/kanax')->setPriority(1));
-        $map->add(Url::create('$LOWER_NAME$/search')->setPriority(.9));
+        $map->add(Url::create('$LOWER_NAME$/privacy')->setPriority(.8));
+        $map->add(Url::create('$LOWER_NAME$/terms-of-service')->setPriority(.8));
 
         $map->writeToFile($path);
 

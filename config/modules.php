@@ -34,6 +34,7 @@ return [
             'views/master' => 'Resources/views/layouts/master.blade.php',
             'scaffold/config' => 'Config/config.php',
             'composer' => 'composer.json',
+            'controller-sitemap'  => 'Http/Controllers/SitemmapController.php',
             // 'assets/js/app' => 'Resources/assets/js/app.js',
             // 'assets/sass/app' => 'Resources/assets/sass/app.scss',
             // 'webpack' => 'webpack.mix.js',
