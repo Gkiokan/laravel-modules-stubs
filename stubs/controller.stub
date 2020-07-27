@@ -35,4 +35,24 @@ class $CLASS$ extends Controller
         return $response;
     }
 
+
+    // Return Sitemap
+    public function sitemap()
+    {
+        $path = public_path('modules/$LOWER_NAME$/sitemap.xml');
+        $map  = SitemapGenerator::create('https://gkiokan.net/$LOWER_NAME$')->getSitemap();
+
+        $map->add(Url::create('$LOWER_NAME$/home'));
+        $map->add(Url::create('$LOWER_NAME$/about'));
+        $map->add(Url::create('$LOWER_NAME$/login'));
+        $map->add(Url::create('$LOWER_NAME$/privacy'));
+        $map->add(Url::create('$LOWER_NAME$/terms-of-service'));
+
+        $map->writeToFile($path);
+
+        // dump print
+        header('Content-type: text/xml');
+        die(File::get($path));
+    }
+
 }
